@@ -33,56 +33,40 @@
 	<section class="gallery">
 		<h1>Галерея</h1>
 
-		<div id="empty-state" class="empty-state" style="display: none;">
+		<div id="empty-state" class="empty-state">
 			<img src="img/sulus-dead.png" alt="Мертвый чиби-Сулус">
 			<h2>Ничего тут пока нет :(</h2>
 		</div>
 
-		<div class="gallery-grid">
+		<div class="gallery-grid" id="gallery-grid">
 			<div class="gallery-item">
-				<img src="img/concept.png" alt="">
+				<img src="img/concept.png" alt="Первый концепт-арт Сулуса">
 				<p class="caption">Первый концепт-арт Сулуса</p>
 			</div>
-
 			<div class="gallery-item">
-				<img src="img/cryocamera.png" alt="">
+				<img src="img/cryocamera.png" alt="Сулус ждёт друга из криокамеры">
 				<p class="caption">Сулус ждёт друга из криокамеры</p>
 			</div>
-
 			<div class="gallery-item">
-				<img src="img/full_body_color.png" alt="">
+				<img src="img/full_body_color.png" alt="Полный цветной арт">
 				<p class="caption">Полный цветной арт</p>
 			</div>
-
 			<div class="gallery-item">
-				<img src="img/MEGA_poster.jpg" alt="">
+				<img src="img/MEGA_poster.jpg" alt="Постер с Доминикой и Шесей">
 				<p class="caption">Постер с Доминикой и Шесей</p>
 			</div>
-
 			<div class="gallery-item">
-				<img src="img/sulus-dead.png" alt="">
+				<img src="img/sulus-dead.png" alt="Чиби Сулус">
 				<p class="caption">Чиби Сулус</p>
 			</div>
 		</div>
 	</section>
 
+	<!-- Lightbox -->
+	<div class="lightbox" id="lightbox"></div>
+
 	<script src="js/gallery.js"></script>
 	<script src="js/nav.js"></script>
-	<script>
-		const hamburger = document.getElementById('hamburger');
-		const navLinks = document.getElementById('nav-links');
-
-		hamburger.addEventListener('click', () => {
-			navLinks.classList.toggle('active');
-		});
-
-		const container = document.querySelector('.gallery-grid');
-		const emptyState = document.getElementById('empty-state');
-
-		if (!container || container.children.length === 0) {
-			emptyState.style.display = 'flex';
-		}
-	</script>
 </body>
 
 </html>
